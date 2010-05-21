@@ -1,14 +1,42 @@
 <?php
+/*
+Theme Name: BlancMont XL
+Version: 2.1.a
+Description: Night theme
+Theme URI: http://piwigo.org/ext/extension_view.php?eid=232
+Author: repie38
+Author URI: 
+*/
+
 $themeconf = array(
-  'template' => 'yoga',
-  'template_dir' => 'template/yoga',
-  'theme' => 'blancmontxl',
-  'icon_dir' => PHPWG_ROOT_PATH.'template/yoga/theme/blancmontxl/icon',
-   'mime_icon_dir' => PHPWG_ROOT_PATH.'template/yoga/icon/mimetypes/',
-  'local_head' => '<!--[if lt IE 7]>
-  <link rel="stylesheet" type="text/css" href="'.PHPWG_ROOT_PATH.'template/yoga/theme/blancmontxl/fix-ie5-ie6.css">
-<![endif]-->'
+  'parent'      => 'default',
+  'icon_dir'    => 'themes/blancmontxl/icon',
+  'local_head'  => 'local_head.tpl',
 );
-$lang['Theme: blancmontxl'] = 'Thème BlancMontXP By repié38.';
+
+
+add_event_handler('loc_begin_page_header', 'set_bmxl_header');
+
+function set_bmxl_header()
+{
+  global $page, $conf, $template;
+
+  $config = unserialize($conf['BlancmontXL']);
+
+  if (isset($page['body_id']) and $page['body_id'] == 'theCategoryPage')
+  {
+    $header = isset($page['category']) ? $config['categories'] : $config['home'];
+  }
+  elseif (isset($page['body_id']) and $page['body_id'] == 'thePicturePage')
+  {
+    $header = $config['picture'];
+  }
+  else
+  {
+    $header = $config['other'];
+  }
+
+  $template->assign('display_bmxl_banner', $header);
+}
 
 ?>

@@ -1,4 +1,4 @@
-@import url(menu.css);
+/* @import url(menu.css); */
 
 * { margin: 0; padding: 0; border: 0; }
 
@@ -17,9 +17,9 @@ h2, h3 { color:#969696; }
 ul { list-style: none; }
 ul li { list-style: none; }
 
-a, a:link { color:#ff9933; text-decoration: none; border:0; }
+a, a:link, a:hover { color:#ff9933; text-decoration: none; border:0 !important; }
 a:hover { text-decoration: none; border-bottom:1px solid #ff9933;}
-/*a:visited { color:#cccccc;}*/
+/*a:visited { color:#333333;}*/
 
 pre { overflow: auto; width: 100%; height: auto; }
 .left { float: left; }
@@ -70,7 +70,7 @@ BODY#thePicturePage,BODY#theCategoryPage, BODY#theTagsPage {}
 	font-size: 2em; 
 	margin: 0;
 	/*	padding: 170px 34px 0 34px; */
-	color: #FFF; 
+	color: #fff; 
 	text-align: left; 
 	position: absolute;
 	left: 30px;
@@ -83,14 +83,6 @@ BODY#thePicturePage,BODY#theCategoryPage, BODY#theTagsPage {}
 	width: 860px;
 	margin: 0 auto !important;
 }
-
-/* Spécifique à la page des images */
-
-#thePicturePage #theHeader {
-	background: transparent url(img/headerpic.jpg) no-repeat center bottom;
-	height: 15px;
-}
-#thePicturePage #theHeader h1 { display: none; }
 
 /*=========================================================================================*/
 
@@ -209,7 +201,7 @@ textarea { width: 100%; }
 }
 
 /* Filter button */
-#menubar .button { position: absolute; left:95% } 
+#menubar .button { position: absolute; left:95%;} 
 #menubar P, #menubar P.totalImages{ clear: both; margin: 0; text-align: center; padding: 0.2em }
 
 /* set menubar height (not for IE) */
@@ -297,7 +289,7 @@ FORM#quickconnect FIELDSET { text-align: left; width: 220px; padding-top: 5px;}
 FORM#quickconnect LABEL { clear: left; /*margin: 0;*/ }
 FORM#quickconnect LABEL INPUT { font-size: 1em; /*width: 15em;*/ }
 FORM#quickconnect P, FORM#quickconnect A { border: none; padding: 0; }
-FORM#quickconnect .button { position:relative; top: -20x; left: 50px}
+FORM#quickconnect .button { position:relative; top: -20px; left: 50px}
 
 /*	menuTagCloud
 -----------------------------------------------------------------------------------------------*/
@@ -345,6 +337,8 @@ ul#fullTagCloud {
 .tagLevel3 { font-size:120%; }
 .tagLevel2 { font-size:100%; }
 .tagLevel1 { font-size:80%; }
+
+#theTagsPage fieldset.tagLetter { width:181px; }
 
 /* others */
 .pleaseNote {
@@ -402,3 +396,6 @@ TD.calDayCellEmpty { color: #3f3f3f; }
 }
 #copyright a:link, #copyright a:visited { text-decoration: underline; color: #fff; }
 #copyright a:hover { text-decoration: none; color: #fff; border: 0; }
+
+/* About page */
+#piwigoAbout UL { margin: 15px 0; }
