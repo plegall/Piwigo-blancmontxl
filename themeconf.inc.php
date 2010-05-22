@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: BlancMont XL
-Version: 2.1.a
+Version: 2.1.c
 Description: Night theme
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=232
 Author: repie38
@@ -10,10 +10,12 @@ Author URI:
 
 $themeconf = array(
   'parent'      => 'default',
-  'icon_dir'    => 'themes/blancmontxl/icon',
   'local_head'  => 'local_head.tpl',
 );
 
+global $conf;
+$config = unserialize($conf['BlancmontXL']);
+$themeconf['icon_dir']=$config['ico'] ? 'themes/montblancxl/icon' : 'themes/blancmontxl/icon' ;
 
 add_event_handler('loc_begin_page_header', 'set_bmxl_header');
 
@@ -35,8 +37,6 @@ function set_bmxl_header()
   {
     $header = $config['other'];
   }
-
   $template->assign('display_bmxl_banner', $header);
 }
-
 ?>

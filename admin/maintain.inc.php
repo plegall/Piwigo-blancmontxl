@@ -11,6 +11,7 @@ function theme_activate($id, $version, &$errors)
       'categories' => true,
       'picture'    => false,
       'other'      => true,
+	  'ico'        => false,
       );
       
     $query = '

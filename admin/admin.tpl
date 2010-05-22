@@ -23,6 +23,10 @@
           <span class="property">{'Display page banner on other pages'|@translate}</span>
           <input type="checkbox" name="bmxl[other]" value="true" {if $bmxl.other}checked="checked"{/if}>
         </li>
+		 <li>
+          <span class="property">{'Use MontBlancXL icon set'|@translate}</span>
+          <input type="checkbox" name="bmxl[ico]" value="true" {if $bmxl.ico}checked="checked"{/if}>
+        </li>
       </ul>
   </fieldset>
 </div>
