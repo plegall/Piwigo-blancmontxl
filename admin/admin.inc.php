@@ -7,7 +7,7 @@ $options = array(
   'categories',
   'picture',
   'other',
-  'ico',
+  'icon_dir',
 );
 
 if (isset($_POST['submit']))
@@ -16,8 +16,8 @@ if (isset($_POST['submit']))
   {
     $_POST['bmxl'][$option] = empty($_POST['bmxl'][$option]) ? false : true;
   }
-  
-  $_POST['bmxl']['ico'] = file_exists('themes/montblancxl/icon/add_tag.png') ? $_POST['bmxl']['ico'] : false ;
+ 
+  $_POST['bmxl']['icon_dir'] = $_POST['bmxl']['icon_dir'] ? 'montblancxl' : 'blancmontxl' ;
 
   $query = '
 UPDATE '.CONFIG_TABLE.'

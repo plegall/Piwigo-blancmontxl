@@ -8,22 +8,20 @@ Author: repie38
 Author URI: 
 */
 
+global $config;
+$config = unserialize($conf['BlancmontXL']);//echo '<pre>'; print_r($config); echo '</pre>';
+
 $themeconf = array(
   'parent'      => 'default',
   'local_head'  => 'local_head.tpl',
+  'icon_dir'    => 'themes/blancmontxl/icon/'. $config['icon_dir'] 
 );
-
-global $conf;
-$config = unserialize($conf['BlancmontXL']);
-$themeconf['icon_dir']=$config['ico'] ? 'themes/montblancxl/icon' : 'themes/blancmontxl/icon' ;
 
 add_event_handler('loc_begin_page_header', 'set_bmxl_header');
 
 function set_bmxl_header()
 {
-  global $page, $conf, $template;
-
-  $config = unserialize($conf['BlancmontXL']);
+  global $page, $config, $template;
 
   if (isset($page['body_id']) and $page['body_id'] == 'theCategoryPage')
   {

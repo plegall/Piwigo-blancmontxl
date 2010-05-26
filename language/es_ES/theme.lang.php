@@ -4,6 +4,6 @@ $lang['Display page banner on home page'] = 'Fijar la bandera sobre la página i
 $lang['Display page banner on categories pages'] = 'Fijar la bandera sobre la página de las categorías';
 $lang['Display page banner on picture page'] = 'Fijar la bandera sobre la página de las fotos';
 $lang['Display page banner on other pages'] = 'Fijar la bandera sobre otras páginas';
-$lang['Use MontBlancXL icon set'] = 'Utilice <a href="http://piwigo.org/ext/extension_view.php?eid=133">MontBlancXL</a> iconos (tema es necesario)';
+$lang['Use MontBlancXL icon set'] = 'Utilice <a href="http://piwigo.org/ext/extension_view.php?eid=133">MontBlancXL</a> iconos (tema no necesario)';
 
 ?>

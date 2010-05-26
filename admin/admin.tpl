@@ -25,7 +25,7 @@
         </li>
 		 <li>
           <span class="property">{'Use MontBlancXL icon set'|@translate}</span>
-          <input type="checkbox" name="bmxl[ico]" value="true" {if $bmxl.ico}checked="checked"{/if}>
+          <input type="checkbox" name="bmxl[icon_dir]" value="true" {if $bmxl.icon_dir=='montblancxl'}checked="checked"{/if}>
         </li>
       </ul>
   </fieldset>
