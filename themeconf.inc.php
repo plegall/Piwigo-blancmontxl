@@ -9,7 +9,7 @@ Author URI:
 */
 
 global $config;
-$config = unserialize($conf['BlancmontXL']);//echo '<pre>'; print_r($config); echo '</pre>';
+$config = unserialize($conf['BlancmontXL']);
 
 $themeconf = array(
   'parent'      => 'default',
