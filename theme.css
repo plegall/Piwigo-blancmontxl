@@ -399,3 +399,8 @@ TD.calDayCellEmpty { color: #3f3f3f; }
 
 /* About page */
 #piwigoAbout UL { margin: 15px 0; }
+
+
+A:hover .pwg-icon {
+  background-image: url(../default/s26/outline_ff7700.png);
+}
