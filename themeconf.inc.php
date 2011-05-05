@@ -1,8 +1,8 @@
 <?php
 /*
 Theme Name: BlancMont XL
-Version: 2.1.d
-Description: Night theme
+Version: 2.2.b
+Description: Fixed 860px width, graphical banner, horizontal drop down menu, MontBlancXL negative.
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=232
 Author: repie38
 Author URI: 
@@ -17,12 +17,18 @@ $themeconf = array(
   'icon_dir'    => 'themes/blancmontxl/icon/'. $conf['BlancmontXL']['icon_dir'] 
 );
 
+
+
 add_event_handler('loc_begin_page_header', 'set_bmxl_header');
 
 function set_bmxl_header()
 {
   global $page,$template,$conf;
 
+  $template->append('head_elements','<link rel="stylesheet" type="text/css" href="themes/blancmontxl/icon/'. $conf['BlancmontXL']['icon_dir'] .'/iconset.css">');
+  
+  
+  
   if (isset($page['body_id']) and $page['body_id'] == 'theCategoryPage')
   {
     $header = isset($page['category']) ? $conf['BlancmontXL']['categories'] : $conf['BlancmontXL']['home'];
