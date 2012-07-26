@@ -50,7 +50,6 @@ BODY#thePicturePage,BODY#theCategoryPage, BODY#theTagsPage {}
 #the_page {
 	width: 940px;
 	margin: 0 auto;
-	position: relative;
 	background: transparent url(img/background.jpg) repeat-y top center;
 }
 
@@ -62,6 +61,7 @@ BODY#thePicturePage,BODY#theCategoryPage, BODY#theTagsPage {}
 	background: transparent url(img/header.jpg) no-repeat center bottom;
 	height: 200px;
 	margin: 0 auto;
+	position:relative;
 }
 
 #theHeader h1 { 
@@ -128,6 +128,10 @@ BODY#thePicturePage,BODY#theCategoryPage, BODY#theTagsPage {}
 #imageHeaderBar .browsePath a { color:#ff9933; text-decoration: none; }
 #imageHeaderBar .browsePath a:hover { color:#cccccc; }
 
+#imageToolBar .imageNumber {
+  margin-top: -30px;
+}
+
 .infoTable{ margin: 20px auto; }
 #linkPrev{ margin: 20px 0 0 20px; }
 #linkNext{ margin: 20px 20px 0 0;}
@@ -149,13 +153,6 @@ textarea { width: 100%; }
 
 /*	miniatures
 -----------------------------------------------------------------------------------------------*/
-.content UL.thumbnails SPAN, .content UL.thumbnails SPAN.wrap2 A,
-.content UL.thumbnails SPAN.wrap2 LABEL, .content DIV.thumbnailCategory DIV.illustration {
-  width: 155px;			/* max thumbnail width + 2px */
-}
-.content ul.thumbnails span.wrap2{ width: 172px; height:150px; }
-.content DIV.thumbnailCategory DIV.description { height: 100px; }		/* max thumbnail height + 2px */
-.content DIV.thumbnailCategory DIV.illustration img { height: 96px; }
 .content DIV.thumbnailCategory DIV.illustration a:hover { border:0; }
 
 .content DIV.comment BLOCKQUOTE {
@@ -183,7 +180,7 @@ textarea { width: 100%; }
 -----------------------------------------------------------------------------------------------*/
 
 #menubar { position: relative; z-index: 2; }
-.content { position: relative; z-index: 1; }
+.content { z-index: 1; }
 
 .content div.thumbnailCategory div.description {
 	overflow: hidden; /* bug in FF 1.0 (not 1.5) */
@@ -412,4 +409,25 @@ h2 .button {margin-left:2px;margin-bottom:2px}
 
 A:hover .pwg-icon {
   background-image: url(../default/s26/outline_ff7700.png);
+}
+
+#thePicturePage #derivativeSwitchLink {display:none;}
+
+.switchBox, #languageSwitchBox {
+  background-color: black !important;
+  border: 1px solid #666 !important;
+  border-radius:0 !important;
+  color:#ccc;
+}
+
+.switchBoxTitle, #languageSwitchBox .switchBoxTitle {
+  border-bottom:1px solid #666 !important;
+}
+
+.switchBox a, #languageSwitchBox a {
+  color: #ccc !important;
+}
+
+.switchBox a:hover, #languageSwitchBox a:hover {
+  color: #ff9933 !important;
 }
