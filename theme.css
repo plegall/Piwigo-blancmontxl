@@ -413,6 +413,7 @@ A:hover .pwg-icon {
 }
 
 #thePicturePage #derivativeSwitchLink {display:none;}
+#thePicturePage .contentWithMenu {margin-left:0;}
 
 .switchBox, #languageSwitchBox {
   background-color: black !important;
