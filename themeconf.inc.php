@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: BlancMont XL
-Version: 2.2.b
+Version: auto
 Description: Fixed 860px width, graphical banner, horizontal drop down menu, MontBlancXL negative.
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=232
 Author: repie38
